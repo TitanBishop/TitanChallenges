@@ -55,7 +55,6 @@ def connect(HOST,PORT):
         password = "Coffee is For Closers"
         print str(conn.recv(1024))
         print str(conn.recv(1024)) + "\n"
-        print str(conn.recv(1024)) + "\n"
         conn.sendall(password)
 
         #Start Loop
@@ -90,7 +89,6 @@ def connectElite(HOST,PORT):
         #Send the correct password
         password = "Coffee is For Closers"
         print str(conn.recv(1024))
-        print str(conn.recv(1024)) + "\n"
         print str(conn.recv(1024)) + "\n"
         conn.sendall(password)
 
